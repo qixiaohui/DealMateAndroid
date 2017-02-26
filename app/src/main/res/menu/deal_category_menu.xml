@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:title="deals">
+            <menu>
+                <item
+                    android:id="@+id/computers"
+                    android:icon="@drawable/computers"
+                    android:title="@string/menu_computer" />
+                <item
+                    android:id="@+id/electronics"
+                    android:icon="@drawable/electronics"
+                    android:title="@string/menu_electronics" />
+                <item
+                    android:id="@+id/tablets"
+                    android:icon="@drawable/tablet"
+                    android:title="@string/menu_tablet" />
+                <item
+                    android:id="@+id/gaming"
+                    android:icon="@drawable/gaming"
+                    android:title="@string/menu_gaming" />
+                <item
+                    android:id="@+id/lifestyle"
+                    android:icon="@drawable/lifestyle"
+                    android:title="@string/menu_lifestyle" />
+            </menu>
+        </item>
+    </group>
+    <group android:checkableBehavior="single">
+        <item android:title="favorite">
+            <menu>
+                <item
+                    android:id="@+id/favorite"
+                    android:icon="@drawable/favorite"
+                    android:title="@string/favorite" />
+            </menu>
+        </item>
+    </group>
+</menu>

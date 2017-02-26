@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DealMate</string>
+    <string name="menu_computer">Computers</string>
+    <string name="menu_electronics">Electronics</string>
+    <string name="menu_gaming">Gaming</string>
+    <string name="menu_tablet">Phone/Tablet</string>
+    <string name="menu_lifestyle">Lifestyle</string>
+    <string name="drawer_open">open drawer</string>
+    <string name="drawer_close">close drawer</string>
+    <string name="check_deal">Checkout Deal</string>
+    <string name="favorite">Favorite</string>
+    <string name="invalid_ssl_certificate">The certificate of this website is not secure, do you want to proceed?</string>
+</resources>

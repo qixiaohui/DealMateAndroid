@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/productInfo"
+    android:layout_marginTop="50dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardUseCompatPadding="true"
+    android:elevation="4dp"
+    card_view:cardCornerRadius="2dp">
+    <RelativeLayout
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <ImageView
+            android:paddingRight="75dp"
+            android:paddingLeft="75dp"
+            android:transitionName="productImg"
+            android:layout_alignParentTop="true"
+            android:layout_height="220dp"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:id="@+id/product_image" />
+        <TextView
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_below="@+id/product_image"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:id="@+id/product_title" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
