@@ -98,7 +98,7 @@ public class DealListActivity extends ActivityBase
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
         drawerLayout.closeDrawers();
-        if(currentItemId == id && id != R.id.favorite)
+        if(currentItemId == id && id != R.id.favorite && id != R.id.local)
             return true;
         currentItemId = id;
         switch (id) {
@@ -119,6 +119,9 @@ public class DealListActivity extends ActivityBase
                 break;
             case R.id.favorite:
                 invokeActivity(DealListActivity.this, ListFavoriteActivity.class);
+                break;
+            case R.id.local:
+                invokeActivity(DealListActivity.this, LocalDealListActivity.class);
                 break;
         }
         tabLayout();

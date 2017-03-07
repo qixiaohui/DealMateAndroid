@@ -9,5 +9,6 @@
     <string name="drawer_close">close drawer</string>
     <string name="check_deal">Checkout Deal</string>
     <string name="favorite">Favorite</string>
+    <string name="local">Local</string>
     <string name="invalid_ssl_certificate">The certificate of this website is not secure, do you want to proceed?</string>
 </resources>

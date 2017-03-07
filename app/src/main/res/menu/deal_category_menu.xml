@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
-        <item android:title="deals">
+        <item android:title="popular deals">
             <menu>
                 <item
                     android:id="@+id/computers"
@@ -24,16 +24,20 @@
                     android:id="@+id/lifestyle"
                     android:icon="@drawable/lifestyle"
                     android:title="@string/menu_lifestyle" />
-            </menu>
-        </item>
-    </group>
-    <group android:checkableBehavior="single">
-        <item android:title="favorite">
-            <menu>
                 <item
                     android:id="@+id/favorite"
                     android:icon="@drawable/favorite"
                     android:title="@string/favorite" />
+            </menu>
+        </item>
+    </group>
+    <group android:checkableBehavior="single">
+        <item android:title="local delas">
+            <menu>
+                <item
+                    android:id="@+id/local"
+                    android:icon="@drawable/local"
+                    android:title="@string/local" />
             </menu>
         </item>
     </group>

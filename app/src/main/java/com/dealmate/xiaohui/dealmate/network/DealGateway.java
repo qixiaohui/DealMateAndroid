@@ -2,6 +2,7 @@ package com.dealmate.xiaohui.dealmate.network;
 
 import com.dealmate.xiaohui.dealmate.model.DealDetail;
 import com.dealmate.xiaohui.dealmate.model.DealModel;
+import com.dealmate.xiaohui.dealmate.model.LocalDealModel;
 
 import java.util.List;
 
@@ -19,4 +20,7 @@ public interface DealGateway {
 
     @GET("/detail/{id}")
     void getDetail(@Path("id") String id, retrofit.Callback<DealDetail> callback);
+
+    @GET("/local/{city}")
+    void getLocal(@Path("city") String city, retrofit.Callback<LocalDealModel> callback);
 }

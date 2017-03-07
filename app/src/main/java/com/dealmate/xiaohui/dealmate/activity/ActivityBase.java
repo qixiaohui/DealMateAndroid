@@ -1,8 +1,12 @@
 package com.dealmate.xiaohui.dealmate.activity;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -34,5 +38,13 @@ public class ActivityBase extends AppCompatActivity {
         Intent intent = new Intent(fromActivity, c);
         intent.putExtra(key, data);
         fromActivity.startActivity(intent, option.toBundle());
+    }
+
+    public boolean checkPermission() {
+        return Build.VERSION.SDK_INT >= 23
+                && ActivityCompat.checkSelfPermission(ActivityBase.this,
+                Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED
+                && ActivityCompat.checkSelfPermission(ActivityBase.this,
+                Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED;
     }
 }

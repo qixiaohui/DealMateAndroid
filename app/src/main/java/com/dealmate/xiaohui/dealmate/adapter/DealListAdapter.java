@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import com.dealmate.xiaohui.dealmate.R;
 import com.dealmate.xiaohui.dealmate.activity.ActivityBase;
-import com.dealmate.xiaohui.dealmate.activity.DealDetailAjaxActivity;
 import com.dealmate.xiaohui.dealmate.activity.DealDetailBaseActivity;
 import com.dealmate.xiaohui.dealmate.config.CategoryEnum;
 import com.dealmate.xiaohui.dealmate.model.DealModel;
@@ -54,7 +53,7 @@ public class DealListAdapter extends RecyclerView.Adapter<DealListAdapter.ViewHo
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         parentContext = parent.getContext();
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.deal_card, parent, false);
+                .inflate(R.layout.card_deal, parent, false);
         return new ViewHolder(view);
     }
 
@@ -69,7 +68,8 @@ public class DealListAdapter extends RecyclerView.Adapter<DealListAdapter.ViewHo
         if(deals.get(position).getImagePath() != null
                 && !deals.get(position).getImagePath().equals("")) {
             Picasso.with(parentContext).load(deals.get(position)
-                    .getImagePath().replace("124","496").replace("110","440")).into(holder.thumbnail);
+                    .getImagePath().replace("124","496").replace("110","440"))
+                    .into(holder.thumbnail);
         }
         holder.shipping.setText(deals.get(position).getShipping());
         holder.bigButton.setOnClickListener(new View.OnClickListener() {
@@ -80,7 +80,9 @@ public class DealListAdapter extends RecyclerView.Adapter<DealListAdapter.ViewHo
                 DealDetailBaseActivity.invokeActivity((ActivityBase)parentContext,
                         classType,
                         KEY,
-                        deals.get(position).getCategory()+"~"+deals.get(position).getId()+"~"+ new Gson().toJson(deals.get(position)));
+                        deals.get(position).getCategory()
+                                +"~"+deals.get(position).getId()
+                                +"~"+ new Gson().toJson(deals.get(position)));
             }
         });
     }
